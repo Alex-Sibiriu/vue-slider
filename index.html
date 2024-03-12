@@ -49,13 +49,13 @@
                         </div>
 
                         <!-- prev -->
-                        <div class="my-previous position-absolute">
+                        <div @click="prevNext(false)" class="my-previous position-absolute">
                             <span class="my-prev-hook"></span>
                         </div>
 
                     
                         <!-- next -->
-                        <div class="my-next position-absolute">
+                        <div @click="prevNext(true)" class="my-next position-absolute">
                             <span class="my-next-hook"></span>
                         </div>
                     
@@ -73,7 +73,7 @@
                 <div class="col-12 p-3" id="my-after-carousel">
                 </div>
             </div>
-            
+
         </div>
     </main>
 

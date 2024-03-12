@@ -61,7 +61,7 @@
                     
                         <div class="my-thumbnails">
 
-                            <div v-for="(image, index) in images" class="my-thumbnail">
+                            <div v-for="(image, index) in images" @click="counter = index" :class="{'active': counter === index}" class="my-thumbnail">
                                 <img class="img-fluid" :src="image.url" :alt="image.title + ' picture'">
                             </div>
 
@@ -73,12 +73,7 @@
                 <div class="col-12 p-3" id="my-after-carousel">
                 </div>
             </div>
-
-            <div class="text-center">
-                <span class="my-prev-auto btn btn-dark fw-bold">Autoplay Prev</span>
-                <span class="my-stop-auto btn btn-warning fw-bold">Stop Autoplay</span>
-                <span class="my-next-auto btn btn-dark fw-bold">Autoplay Next</span>
-            </div>
+            
         </div>
     </main>
 

@@ -1,6 +1,7 @@
 body{
     font-family: "Montserrat", sans-serif;
     background-color: cadetblue;
+    height: 100vh;
 }
 
 div.my-carousel-container{
@@ -13,11 +14,13 @@ div.my-carousel-container{
 div.my-carousel-images{
     height: 540px;
     border: 1px solid;
+    cursor: pointer;
 }
 
 div.my-thumbnails{
     height: 160px;
     border: 1px solid;
+    cursor: pointer;
 }
 
 div.my-previous,
@@ -30,7 +33,6 @@ div.my-next{
     z-index: 1;
     bottom: 6%;
     transform: translateY(-50%);
-    cursor: pointer;
 }
 
 div.my-previous{

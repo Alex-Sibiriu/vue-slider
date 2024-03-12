@@ -26,17 +26,16 @@
 </head>
 <body>
 
-    <main id="app">
+    <main id="app" class="d-flex align-items-center h-100">
         <div class="container-fluid p-5">
             <div class="row text-center">
-                
-                <div class="col-12 p-3" id="my-before-carousel"></div>
 
                 <div class="col-12 p-5">
 
                     <div
                       @mouseenter="startPlay = false"
                       @mouseleave="startPlay = true"
+                      @dblclick="directionPlay = !directionPlay"
                       class="my-carousel-container position-relative d-flex flex-column px-5"
                       id="my-carousel">
 
@@ -78,8 +77,6 @@
                     </div>
                 </div>
 
-                <div class="col-12 p-3" id="my-after-carousel">
-                </div>
             </div>
 
         </div>

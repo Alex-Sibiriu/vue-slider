@@ -35,6 +35,7 @@ createApp({
             ],
             counter: 0,
             startPlay: true,
+            directionPlay: true,
         }
     },
 
@@ -53,7 +54,7 @@ createApp({
         autoplay() {
             setInterval(() => {
                 if (this.startPlay) {
-                    this.prevNext(true)
+                    this.prevNext(this.directionPlay)
                 }
                 }, 3000);              
         }

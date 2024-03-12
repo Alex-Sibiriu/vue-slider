@@ -38,7 +38,7 @@ createApp({
     },
 
     methods: {
-        prevNext(isNext){
+        prevNext(isNext) {
 
             if (isNext) {
                 this.counter++
@@ -47,8 +47,17 @@ createApp({
                 this.counter--;
                 if (this.counter < 0) this.counter = this.images.length -1;
             }
-            console.log(this.counter);
+        },
+
+        autoplay() {
+            setInterval(() => {
+                this.prevNext(true)
+            }, 3000);
         }
+    },
+
+    mounted() {
+        this.autoplay();
     },
 
 }).mount('#app')

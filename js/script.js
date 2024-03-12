@@ -34,6 +34,7 @@ createApp({
                 },
             ],
             counter: 0,
+            startPlay: true,
         }
     },
 
@@ -51,8 +52,10 @@ createApp({
 
         autoplay() {
             setInterval(() => {
-                this.prevNext(true)
-            }, 3000);
+                if (this.startPlay) {
+                    this.prevNext(true)
+                }
+                }, 3000);              
         }
     },
 

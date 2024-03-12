@@ -34,7 +34,11 @@
 
                 <div class="col-12 p-5">
 
-                    <div class="my-carousel-container position-relative d-flex flex-column px-5" id="my-carousel">
+                    <div
+                      @mouseenter="startPlay = false"
+                      @mouseleave="startPlay = true"
+                      class="my-carousel-container position-relative d-flex flex-column px-5"
+                      id="my-carousel">
 
                         <div class="my-carousel-images">
 
@@ -61,7 +65,11 @@
                     
                         <div class="my-thumbnails">
 
-                            <div v-for="(image, index) in images" @click="counter = index" :class="{'active': counter === index}" class="my-thumbnail">
+                            <div
+                              v-for="(image, index) in images"
+                              @click="counter = index"
+                              :class="{'active': counter === index}"
+                              class="my-thumbnail">
                                 <img class="img-fluid" :src="image.url" :alt="image.title + ' picture'">
                             </div>
 
